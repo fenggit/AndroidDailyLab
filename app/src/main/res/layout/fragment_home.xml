@@ -11,7 +11,7 @@
     tools:context=".ui.home.HomeFragment">
 
     <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/ad_jetpack"
+        android:id="@+id/module_jetpack"
         android:layout_width="match_parent"
         android:layout_height="143dp"
         android:layout_marginTop="12dp"

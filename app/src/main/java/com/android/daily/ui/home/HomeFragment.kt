@@ -1,5 +1,6 @@
 package com.android.daily.ui.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -23,8 +24,8 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        binding.adJetpack.setOnClickListener {
-
+        binding.moduleJetpack.setOnClickListener {
+            startActivity(Intent(activity, JetpackActivity::class.java))
         }
 
 //        val textView: TextView = binding.textHome
