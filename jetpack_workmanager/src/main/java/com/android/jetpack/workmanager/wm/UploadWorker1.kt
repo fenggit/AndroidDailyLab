@@ -9,9 +9,9 @@ import java.util.*
 /**
  * author : hefeng
  * date : 2022/7/25
- * description :
+ * description : 及时任务
  */
-class UploadWorker(appContext: Context, workerParams: WorkerParameters) : Worker(appContext, workerParams) {
+class UploadWorker1(appContext: Context, workerParams: WorkerParameters) : Worker(appContext, workerParams) {
     val TAG = "UploadWorker"
 
     // 后台异步任务
@@ -25,7 +25,7 @@ class UploadWorker(appContext: Context, workerParams: WorkerParameters) : Worker
     }
 
     fun uploadImages(): Boolean {
-        Thread.sleep(3000)
-        return Random().nextInt(10) % 2 == 2
+        Thread.sleep(1000)
+        return Random().nextInt(100) % 2 == 1
     }
 }
