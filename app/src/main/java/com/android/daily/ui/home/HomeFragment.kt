@@ -28,6 +28,14 @@ class HomeFragment : Fragment() {
             startActivity(Intent(activity, JetpackActivity::class.java))
         }
 
+        binding.moduleView.setOnClickListener {
+            startActivity(Intent(activity, JetpackActivity::class.java))
+        }
+
+        binding.moduleArchitecture.setOnClickListener {
+            startActivity(Intent(activity, JetpackActivity::class.java))
+        }
+
 //        val textView: TextView = binding.textHome
 //        homeViewModel.text.observe(viewLifecycleOwner) {
 //            textView.text = it
