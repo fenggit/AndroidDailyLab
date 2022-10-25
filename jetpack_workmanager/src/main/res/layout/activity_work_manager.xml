@@ -25,4 +25,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="异步上传任务3（多任务）" />
+
+    <Button
+        android:id="@+id/btn_task4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="异步上传任务4（断网上传）" />
+
+    <Button
+        android:id="@+id/btn_task5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="异步上传任务5（约束条件）" />
+
+    <Button
+        android:id="@+id/btn_task6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="异步上传任务6（重复任务）" />
+    <Button
+        android:id="@+id/btn_task7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="异步上传任务7（重试机制）" />
 </androidx.appcompat.widget.LinearLayoutCompat>

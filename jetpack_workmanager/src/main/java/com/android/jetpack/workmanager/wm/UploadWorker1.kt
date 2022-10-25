@@ -14,13 +14,17 @@ import java.util.*
 class UploadWorker1(appContext: Context, workerParams: WorkerParameters) : Worker(appContext, workerParams) {
     val TAG = "UploadWorker"
 
-    // 后台异步任务
+    /**
+     * 后台异步任务
+     */
     override fun doWork(): Result {
 
         Log.e(TAG, "start upload ...")
         val isResult = uploadImages()
         Log.e(TAG, "upload result = $isResult")
+        Result.retry()
 
+        // 任务执行成功或失败
         return if (isResult) Result.success() else Result.failure()
     }
 
