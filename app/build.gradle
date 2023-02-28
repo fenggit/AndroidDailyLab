@@ -45,5 +45,6 @@ dependencies {
     implementation("io.coil-kt:coil:2.1.0")
 
     implementation project(":jetpack_workmanager")
-    implementation project(path: ':architecture-mvp')
+    implementation project(":architecture-mvp")
+    implementation project(":android-view")
 }

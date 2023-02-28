@@ -16,3 +16,4 @@ rootProject.name = "AndroidDailyLab"
 include ':app'
 include ':jetpack_workmanager'
 include ':architecture-mvp'
+include ':android-view'

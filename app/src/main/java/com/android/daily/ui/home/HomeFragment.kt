@@ -9,6 +9,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.android.daily.databinding.FragmentHomeBinding
+import com.android.daily.view.MainViewActivity
 import com.androiddaily.mvp.MVPMainActivity
 
 class HomeFragment : Fragment() {
@@ -30,7 +31,7 @@ class HomeFragment : Fragment() {
         }
 
         binding.moduleView.setOnClickListener {
-            //startActivity(Intent(activity, JetpackActivity::class.java))
+            startActivity(Intent(activity, MainViewActivity::class.java))
         }
 
         binding.moduleArchitecture.setOnClickListener {
