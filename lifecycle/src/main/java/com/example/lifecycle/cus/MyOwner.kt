@@ -21,16 +21,16 @@ class MyOwner : LifecycleOwner {
         return lifecycleRegistry
     }
 
-    fun onStart() {
-        lifecycleRegistry.currentState = Lifecycle.State.CREATED
-        //lifecycleRegistry.handleLifecycleEvent(Lifecycle.Event.ON_START)
+    fun start() {
+        //lifecycleRegistry.currentState = Lifecycle.State.CREATED
+        lifecycleRegistry.handleLifecycleEvent(Lifecycle.Event.ON_START)
     }
 
-    fun onStop() {
+    fun stop() {
         lifecycleRegistry.handleLifecycleEvent(Lifecycle.Event.ON_STOP)
     }
 
-    fun onDestroy() {
+    fun destroy() {
         lifecycleRegistry.handleLifecycleEvent(Lifecycle.Event.ON_DESTROY)
     }
 }

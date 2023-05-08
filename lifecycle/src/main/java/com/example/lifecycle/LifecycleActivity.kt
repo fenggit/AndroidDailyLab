@@ -25,11 +25,11 @@ class LifecycleActivity : AppCompatActivity() {
         myOwner.lifecycle.addObserver(myObserver)
 
         findViewById<Button>(R.id.btn_life_start).setOnClickListener {
-            myOwner.onStart()
+            myOwner.start()
         }
 
         findViewById<Button>(R.id.btn_life_release).setOnClickListener {
-            myOwner.onDestroy()
+            myOwner.destroy()
         }
     }
 }
