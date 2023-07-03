@@ -15,7 +15,6 @@ class LiveDataActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_live_data)
 
-
         liveData.observe(this, object : Observer<String> {
             override fun onChanged(t: String?) {
                 Log.e("LiveDataActivity", "liveData : $t")

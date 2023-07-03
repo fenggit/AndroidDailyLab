@@ -13,7 +13,6 @@ class LifecycleActivity : AppCompatActivity() {
     var myOwner = MyOwner()
     var myObserver = MyObserver()
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lifecycle)

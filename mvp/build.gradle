@@ -2,6 +2,7 @@ plugins {
 //    id 'com.android.application'
     id 'com.android.library'
     id 'kotlin-android'
+    id 'org.jetbrains.kotlin.android'
 }
 
 android {
@@ -26,6 +27,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    namespace 'com.androiddaily.mvp'
 }
 
 dependencies {
@@ -33,4 +35,5 @@ dependencies {
 //    implementation 'androidx.appcompat:appcompat:1.4.2'
 //    implementation 'com.google.android.material:material:1.4.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.core:core-ktx:+'
 }
