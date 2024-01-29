@@ -11,6 +11,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.android.daily.databinding.FragmentHomeBinding
 import com.android.daily.view.MainViewActivity
 import com.androiddaily.mvp.MVPMainActivity
+import com.example.kt.KtMainActivity
 
 class HomeFragment : Fragment() {
 
@@ -36,6 +37,10 @@ class HomeFragment : Fragment() {
 
         binding.moduleArchitecture.setOnClickListener {
             startActivity(Intent(activity, MVPMainActivity::class.java))
+        }
+
+        binding.moduleKotlin.setOnClickListener {
+            startActivity(Intent(activity, KtMainActivity::class.java))
         }
 
 //        val textView: TextView = binding.textHome
