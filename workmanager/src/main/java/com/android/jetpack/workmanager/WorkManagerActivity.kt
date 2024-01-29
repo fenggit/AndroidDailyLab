@@ -165,9 +165,10 @@ class WorkManagerActivity : AppCompatActivity() {
      * 7、重复执行任务
      */
     fun task7() {
+        //val data = Data.Builder().putString(KEY_NAME, "felix").build()
         val uploadWorkRequest = OneTimeWorkRequest.Builder(UploadWorker5::class.java)
             // LINEAR：下次重试时间以线性的方式延迟，EXPONENTIAL：重试时间以指数的方式延迟，最低是10s重试一次
-            .setBackoffCriteria(BackoffPolicy.LINEAR, 10, TimeUnit.SECONDS)
+            .setBackoffCriteria(BackoffPolicy.LINEAR, 2, TimeUnit.SECONDS)
             .build()
         WorkManager.getInstance(applicationContext).enqueue(uploadWorkRequest)
     }
