@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
 //        applicationId "com.androiddaily.mvp"
-        minSdk 21
+        minSdk 24
         targetSdk 35
     }
 
