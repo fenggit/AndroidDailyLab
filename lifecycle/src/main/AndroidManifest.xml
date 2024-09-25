@@ -8,7 +8,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidDailyLab">
         <activity
-            android:name=".LifecycleActivity"
+            android:name=".LifecycleActivity3"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -16,6 +16,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<!--        <activity android:name="com.example.lifecycle.LifecycleActivity3" />-->
     </application>
 
 </manifest>
