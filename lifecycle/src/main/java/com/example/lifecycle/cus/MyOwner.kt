@@ -13,12 +13,10 @@ import androidx.lifecycle.LifecycleRegistry
 class MyOwner : LifecycleOwner {
     private var lifecycleRegistry: LifecycleRegistry = LifecycleRegistry(this)
 
+    override val lifecycle: Lifecycle = lifecycleRegistry
+
     init {
         lifecycleRegistry.handleLifecycleEvent(Lifecycle.Event.ON_CREATE)
-    }
-
-    override fun getLifecycle(): Lifecycle {
-        return lifecycleRegistry
     }
 
     fun start() {

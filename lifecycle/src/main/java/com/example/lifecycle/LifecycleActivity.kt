@@ -17,12 +17,13 @@ class LifecycleActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lifecycle)
 
-        lifecycle.addObserver(LifeObserver1())
+//        lifecycle.addObserver(LifeObserver1())
+//        lifecycle.addObserver(LifeObserver2())
+//        lifecycle.addObserver(LifeObserver3())
+
         lifecycle.addObserver(LifeObserver2())
-        lifecycle.addObserver(LifeObserver3())
 
         myOwner.lifecycle.addObserver(myObserver)
-
         findViewById<Button>(R.id.btn_life_start).setOnClickListener {
             myOwner.start()
         }
@@ -30,5 +31,10 @@ class LifecycleActivity : AppCompatActivity() {
         findViewById<Button>(R.id.btn_life_release).setOnClickListener {
             myOwner.destroy()
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+//        lifecycle.addObserver(LifeObserver2())
     }
 }
