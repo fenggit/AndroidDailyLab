@@ -5,11 +5,11 @@ plugins {
 
 android {
     namespace 'com.example.kt'
-    compileSdk 35
+    compileSdk rootProject.ext.compileSdk
 
     defaultConfig {
-        minSdk 24
-        targetSdk 35
+        minSdk rootProject.ext.minSdk
+        targetSdk rootProject.ext.targetSdk
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -31,15 +31,15 @@ android {
 }
 
 dependencies {
-    implementation 'androidx.core:core-ktx:1.8.0'
-    implementation 'androidx.appcompat:appcompat:1.4.1'
-    testImplementation 'junit:junit:4.12'
+    implementation "androidx.core:core-ktx:$androidxCoreKtx"
+    implementation "androidx.appcompat:appcompat:$androidxAppcompat"
+    testImplementation "junit:junit:$junit"
 
-//    implementation 'com.google.android.material:material:1.9.0'
+//    implementation "com.google.android.material:material:$material"
 
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.0"
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.0"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesCore"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesAndroid"
 
-    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.6.1"
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycleRuntimeKtx"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleViewmodelKtx"
 }

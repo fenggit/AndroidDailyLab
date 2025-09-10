@@ -1,0 +1,54 @@
+ext {
+    // Android SDK versions
+    minSdk = 24
+    targetSdk = 36
+    compileSdk = 36
+    
+    // Android Gradle Plugin version
+    androidGradlePlugin = '8.9.1'
+    
+    // Kotlin version
+    kotlinVersion = '1.9.24'
+    
+    // Dependencies versions - Updated to latest stable versions
+    androidxCoreKtx = '1.13.1'
+    androidxAppcompat = '1.7.0'
+    material = '1.12.0'
+    constraintLayout = '2.2.0'
+    lifecycleLivedataKtx = '2.8.7'
+    lifecycleViewmodelKtx = '2.8.7'
+    lifecycleRuntimeKtx = '2.8.7'
+    navigationFragmentKtx = '2.8.2'
+    navigationUiKtx = '2.8.2'
+    coil = '2.7.0'
+    
+    // Activity and Fragment versions
+    activityKtx = '1.9.3'
+    fragmentKtx = '1.8.5'
+    
+    // Compose versions
+    composeBom = '2024.12.01'
+    composeCompiler = '1.5.14'
+    
+    // Network libraries
+    retrofit = '2.11.0'
+    okhttp = '4.12.0'
+    moshi = '1.15.1'
+    
+    // Coroutines
+    coroutinesCore = '1.8.1'
+    coroutinesAndroid = '1.8.1'
+    
+    // WorkManager
+    workRuntime = '2.9.1'
+    
+    // Glide
+    glide = '4.16.0'
+    
+    // Test dependencies
+    junit = '4.13.2'
+    androidxTestJunit = '1.2.1'
+    espressoCore = '3.6.1'
+    mockitoCore = '5.12.0'
+    mockitoAndroid = '5.12.0'
+}

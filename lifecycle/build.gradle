@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace 'com.example.lifecycle'
-    compileSdk 35
+    compileSdk rootProject.ext.compileSdk
 
     defaultConfig {
         applicationId "com.example.lifecycle"
-        minSdk 24
-        targetSdk 35
+        minSdk rootProject.ext.minSdk
+        targetSdk rootProject.ext.targetSdk
         versionCode 1
         versionName "1.0"
 
@@ -36,18 +36,18 @@ android {
 def lifecycle_version = "2.5.1"
 
 dependencies {
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.4.1'
-    implementation 'com.google.android.material:material:1.5.0'
+    implementation "androidx.core:core-ktx:$androidxCoreKtx"
+    implementation "androidx.appcompat:appcompat:$androidxAppcompat"
+    implementation "com.google.android.material:material:$material"
 
     // ViewModel
-//    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version")
+//    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleViewmodelKtx")
     // LiveData
-//    implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version")
+//    implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleLivedataKtx")
     // Lifecycles only (without ViewModel or LiveData)
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:$lifecycleRuntimeKtx")
 
-    implementation 'com.github.bumptech.glide:glide:4.0.0'
-    implementation 'androidx.lifecycle:lifecycle-service:2.8.6'
+    implementation "com.github.bumptech.glide:glide:$glide"
+    implementation "androidx.lifecycle:lifecycle-service:$lifecycleRuntimeKtx"
 
 }

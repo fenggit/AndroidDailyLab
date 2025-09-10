@@ -4,12 +4,13 @@ plugins {
 }
 
 android {
-    compileSdk 35
+    compileSdk rootProject.ext.compileSdk
+    namespace 'com.android.daily'
 
     defaultConfig {
         applicationId "com.android.daily"
-        minSdk 24
-        targetSdk 35
+        minSdk rootProject.ext.minSdk
+        targetSdk rootProject.ext.targetSdk
         versionCode 1
         versionName "1.0"
     }
@@ -30,20 +31,22 @@ android {
     buildFeatures {
         viewBinding true
     }
-    namespace 'com.android.daily'
 }
 
 dependencies {
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.4.2'
-    implementation 'com.google.android.material:material:1.4.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
-    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.1'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1'
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
+    implementation "androidx.core:core-ktx:$androidxCoreKtx"
+    implementation "androidx.appcompat:appcompat:$androidxAppcompat"
+    implementation "com.google.android.material:material:$material"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintLayout"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleLivedataKtx"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleViewmodelKtx"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycleRuntimeKtx"
+    implementation "androidx.navigation:navigation-fragment-ktx:$navigationFragmentKtx"
+    implementation "androidx.navigation:navigation-ui-ktx:$navigationUiKtx"
+    implementation "androidx.activity:activity-ktx:$activityKtx"
+    implementation "androidx.fragment:fragment-ktx:$fragmentKtx"
 
-    implementation("io.coil-kt:coil:2.1.0")
+    implementation("io.coil-kt:coil:$coil")
     implementation project(':workmanager')
     implementation project(':mvp')
     implementation project(":android-view")
